@@ -122,7 +122,8 @@ function lrcDisplay(){
     if(n!=null) {
         var temp = "";
         for (let item in n) {
-            var str = n[item].substring(11);
+            var location=n[item].indexOf("]");
+            var str = n[item].substring(location+1);
             temp =temp+str + "<br/>";
         }
         console.log(temp);

@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@keyframes turn {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    75% {
+        -webkit-transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: beige;
+}
+
+::-webkit-scrollbar { /*滚动条整体样式*/
+
+    width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+
+    height: 1px;
+
+}
+
+::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+
+    border-radius: 10px;
+
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+
+    background: #535353;
+
+}
+
+::-webkit-scrollbar-track { /*滚动条里面轨道*/
+
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+
+    border-radius: 10px;
+
+    background: #EDEDED;
+
+}
+
+#UI {
+    display: block;
+    margin: 0 auto;
+    width: 900px;
+    height: 550px;
+    margin-top: 60px;
+    background: white;
+    font-size: 0;
+}
+
+#header {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: brown;
+    position: relative;
+}
+
+#header span {
+    margin-left: 40px;
+    line-height: 50px;
+    color: white;
+    font-size: 25px;
+}
+
+#header input[type="text"] {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    top: -40px;
+    left: 600px;
+    background: white;
+    border-color: white;
+    outline: none;
+    text-align: center;
+}
+
+#header a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 780px;
+    top: -70px;
+    border-radius: 5px;
+    background-image: url("搜索.png");
+    background-repeat: no-repeat;
+}
+
+#song_list {
+    display: inline-block;
+    width: 300px;
+    height: 450px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.song_item {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+}
+
+#song_list li a {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-image: url("播放.png");
+    position: relative;
+    left: 20px;
+    top: 13px;
+}
+
+#song_list li span {
+    display: inline-block;
+    line-height: 50px;
+    font-size: 10px;
+    color: black;
+    position: relative;
+    left: 65px;
+    top: -25px;
+}
+
+#show {
+    display: inline-block;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+}
+
+#show > div {
+    background: beige;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    border-radius: 100px;
+    overflow: hidden;
+    animation: turn 12s linear infinite;
+    animation-play-state: paused;
+}
+
+#comment {
+    display: inline-block;
+    width: 300px;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#footer {
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+audio {
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+    background: #f1f3f4;
+}
+
+.comment_item {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #a9a9a994;
+    padding-bottom: 15px;
+}
+
+.comment_item div {
+    width: 26px;
+    height: 26px;
+    background: orange;
+    position: relative;
+    left: 15px;
+    top:10px;
+    border-radius: 13px;
+    overflow: hidden;
+}

@@ -7,7 +7,8 @@ var app = new Vue({
         comment_list:[],
         playurl: "",
         imageurl: "",
-        a:[]
+        a:[],
+        ifshow:false
     },
     methods: {
         searchclick: function () {
@@ -37,6 +38,7 @@ var app = new Vue({
         playclick: function (index) {
             console.log(this.list[index][0]);
             var that = this;
+            this.ifshow=true;
             $.ajax({
                 type: "get",
                 dataType: "json",
